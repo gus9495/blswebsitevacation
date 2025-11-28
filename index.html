@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos de Férias 2026 | Broadway Lab School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --neon-pink: #FF006E;
+      --neon-blue: #3A86FF;
+      --neon-purple: #8338EC;
+      --neon-yellow: #FFBE0B;
+      --dark-bg: #0a0a0a;
+      --dark-card: #1a1a1a;
+      --light: #f8f9fa;
+      --gray: #a0a0a0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: var(--light);
+      background: var(--dark-bg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(58, 134, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(131, 56, 236, 0.1) 0%, transparent 50%);
+      z-index: -1;
+      animation: bgShift 15s ease-in-out infinite;
+    }
+
+    @keyframes bgShift {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      border-bottom: 2px solid var(--neon-pink);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.3);
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0 0 10px rgba(255, 0, 110, 0.5));
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      filter: drop-shadow(0 0 20px rgba(255, 0, 110, 0.8));
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    .nav-links a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple));
+      transition: width 0.3s ease;
+      box-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    .nav-links a:hover::before {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--neon-pink);
+      text-shadow: 0 0 20px var(--neon-pink);
+    }
+
+    .hero {
+      margin-top: 90px;
+      height: 95vh;
+      background: 
+        linear-gradient(135deg, rgba(255, 0, 110, 0.4), rgba(131, 56, 236, 0.4)),
+        url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1600') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        transparent 2px,
+        transparent 4px,
+        rgba(0, 0, 0, 0.1) 4px
+      );
+      pointer-events: none;
+      animation: scanlines 8s linear infinite;
+    }
+
+    @keyframes scanlines {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(10px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      padding: 3rem;
+      animation: heroFadeIn 1.5s ease-out;
+    }
+
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 6rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      text-shadow: 
+        0 0 20px var(--neon-pink),
+        0 0 40px var(--neon-pink),
+        0 0 60px var(--neon-pink),
+        3px 3px 0 rgba(0,0,0,0.8);
+      letter-spacing: 8px;
+      line-height: 1;
+      background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: neonPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes neonPulse {
+      0%, 100% {
+        filter: brightness(1);
+      }
+      50% {
+        filter: brightness(1.3);
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      font-weight: 300;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+      letter-spacing: 2px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 1.5rem 4rem;
+      background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+      color: white;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.3rem;
+      border-radius: 0;
+      box-shadow: 
+        0 0 30px rgba(255, 0, 110, 0.6),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Bebas Neue', cursive;
+      border: 2px solid var(--neon-pink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .hero-cta:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 0 50px rgba(255, 0, 110, 0.9),
+        0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .section {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title-wrapper {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: var(--light);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      letter-spacing: 6px;
+      text-shadow: 
+        0 0 10px var(--neon-blue),
+        0 0 20px var(--neon-blue);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));
+      box-shadow: 0 0 20px var(--neon-pink);
+    }
+
+    .section-subtitle {
+      font-size: 1.3rem;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 2rem auto 0;
+      letter-spacing: 1px;
+    }
+
+    .intro-box {
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      padding: 3rem;
+      background: rgba(255, 0, 110, 0.05);
+      border: 2px solid var(--neon-pink);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.2);
+    }
+
+    .intro-box p {
+      color: var(--gray);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-box strong {
+      color: var(--neon-pink);
+      font-weight: 700;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+
+    .course-card {
+      background: var(--dark-card);
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: 
+        0 10px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 2px var(--neon-pink);
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    .course-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.7s ease;
+    }
+
+    .course-card:hover::before {
+      left: 100%;
+    }
+
+    .course-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 
+        0 20px 80px rgba(255, 0, 110, 0.4),
+        0 0 0 3px var(--neon-pink),
+        0 0 30px var(--neon-pink);
+    }
+
+    .course-card[data-course="heathers"]:hover {
+      box-shadow: 
+        0 20px 80px rgba(255, 0, 110, 0.6),
+        0 0 0 3px var(--neon-pink),
+        0 0 40px var(--neon-pink);
+    }
+
+    .course-card[data-course="teen-beach"]:hover {
+      box-shadow: 
+        0 20px 80px rgba(255, 190, 11, 0.6),
+        0 0 0 3px var(--neon-yellow),
+        0 0 40px var(--neon-yellow);
+    }
+
+    .course-card[data-course="wicked"]:hover {
+      box-shadow: 
+        0 20px 80px rgba(131, 56, 236, 0.6),
+        0 0 0 3px var(--neon-purple),
+        0 0 40px var(--neon-purple);
+    }
+
+    .course-tag {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: var(--neon-yellow);
+      color: var(--dark-bg);
+      padding: 0.7rem 1.5rem;
+      font-weight: 900;
+      font-size: 0.85rem;
+      z-index: 10;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Bebas Neue', cursive;
+      box-shadow: 0 0 20px var(--neon-yellow);
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    .course-image-wrapper {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .course-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      filter: brightness(0.8) contrast(1.2);
+    }
+
+    .course-card:hover .course-image {
+      transform: scale(1.15);
+      filter: brightness(1) contrast(1.3);
+    }
+
+    .course-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 100%);
+    }
+
+    .course-image-caption {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-shadow: 
+        0 0 20px var(--neon-pink),
+        2px 2px 0 rgba(0,0,0,0.8);
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 3px;
+    }
+
+    .course-content {
+      padding: 2.5rem;
+    }
+
+    .course-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--light);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+    }
+
+    .course-short {
+      color: var(--gray);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .course-meta {
+      list-style: none;
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--neon-pink);
+      padding-left: 1.5rem;
+    }
+
+    .course-meta li {
+      padding: 0.7rem 0;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 600;
+    }
+
+    .course-meta i {
+      color: var(--neon-pink);
+      font-size: 1.2rem;
+    }
+
+    .course-extra {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease-out, opacity 0.4s ease-out;
+      opacity: 0;
+    }
+
+    .course-card.expanded .course-extra {
+      max-height: 2500px;
+      opacity: 1;
+      margin-top: 2rem;
+    }
+
+    .course-extra-inner {
+      padding: 2rem;
+      background: rgba(255, 0, 110, 0.05);
+      border: 2px solid var(--neon-pink);
+      border-radius: 0;
+      box-shadow: inset 0 0 30px rgba(255, 0, 110, 0.1);
+    }
+
+    .course-extra h4 {
+      font-family: 'Bebas Neue', cursive;
+      color: var(--neon-pink);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    .course-extra h4:first-child {
+      margin-top: 0;
+    }
+
+    .course-extra p {
+      color: var(--gray);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .course-extra ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .course-extra ul li {
+      padding: 0.8rem 0;
+      color: var(--gray);
+      position: relative;
+      padding-left: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .course-extra ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--neon-pink);
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .btn-toggle-extra {
+      width: 100%;
+      padding: 1.3rem;
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid var(--neon-pink);
+      color: var(--neon-pink);
+      font-weight: 700;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.2);
+    }
+
+    .btn-toggle-extra:hover {
+      background: var(--neon-pink);
+      color: var(--dark-bg);
+      box-shadow: 0 0 30px var(--neon-pink);
+      transform: translateY(-2px);
+    }
+
+    .btn-toggle-extra i {
+      transition: transform 0.3s ease;
+      font-size: 1.3rem;
+    }
+
+    .course-card.expanded .btn-toggle-extra i {
+      transform: rotate(180deg);
+    }
+
+    .course-footer {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid rgba(255, 0, 110, 0.3);
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+      color: white;
+      border: 2px solid var(--neon-pink);
+      font-weight: 900;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      box-shadow: 
+        0 10px 30px rgba(255, 0, 110, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .btn-primary:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 
+        0 15px 50px rgba(255, 0, 110, 0.7),
+        0 0 40px var(--neon-pink);
+    }
+
+    .pricing-section {
+      background: var(--dark-card);
+      padding: 5rem 2rem;
+      border-top: 2px solid var(--neon-pink);
+      border-bottom: 2px solid var(--neon-pink);
+    }
+
+    .pricing-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .pricing-card {
+      background: rgba(255, 0, 110, 0.05);
+      border: 2px solid var(--neon-pink);
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 110, 0.2);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(255, 0, 110, 0.5);
+    }
+
+    .pricing-card h3 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2rem;
+      color: var(--neon-pink);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    .pricing-card .price-old {
+      color: var(--gray);
+      text-decoration: line-through;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .price-new {
+      color: var(--neon-yellow);
+      font-size: 3rem;
+      font-weight: 900;
+      font-family: 'Bebas Neue', cursive;
+      display: block;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 20px var(--neon-yellow);
+    }
+
+    .pricing-card p {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .payment-info {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 3rem;
+      background: rgba(58, 134, 255, 0.05);
+      border: 2px solid var(--neon-blue);
+      box-shadow: 0 0 30px rgba(58, 134, 255, 0.2);
+    }
+
+    .payment-info h4 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2rem;
+      color: var(--neon-blue);
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-blue);
+      text-align: center;
+    }
+
+    .payment-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .payment-info ul li {
+      padding: 1rem 0;
+      color: var(--gray);
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 2.5rem;
+      border-bottom: 1px solid rgba(58, 134, 255, 0.2);
+    }
+
+    .payment-info ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--neon-blue);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .payment-info .discount-note {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: rgba(255, 190, 11, 0.1);
+      border-left: 4px solid var(--neon-yellow);
+      color: var(--neon-yellow);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* MODAL DE CHECKOUT */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: var(--dark-card);
+      border: 3px solid var(--neon-pink);
+      box-shadow: 0 0 60px rgba(255, 0, 110, 0.6);
+      max-width: 700px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+      transform: rotate(90deg);
+      color: var(--neon-yellow);
+    }
+
+    .modal-header h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      color: white;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .modal-body {
+      padding: 3rem 2rem;
+    }
+
+    .checkout-step {
+      display: none;
+    }
+
+    .checkout-step.active {
+      display: block;
+      animation: fadeInStep 0.4s ease;
+    }
+
+    @keyframes fadeInStep {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .step-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.8rem;
+      color: var(--neon-pink);
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    .package-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .package-option {
+      background: rgba(255, 0, 110, 0.05);
+      border: 2px solid var(--neon-pink);
+      padding: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .package-option:hover {
+      transform: translateX(10px);
+      box-shadow: 0 0 30px rgba(255, 0, 110, 0.4);
+    }
+
+    .package-option.selected {
+      background: rgba(255, 0, 110, 0.15);
+      border-color: var(--neon-yellow);
+      box-shadow: 0 0 40px rgba(255, 190, 11, 0.5);
+    }
+
+    .package-option.best-deal::before {
+      content: '⭐ MELHOR CUSTO-BENEFÍCIO';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--neon-yellow);
+      color: var(--dark-bg);
+      padding: 0.5rem 1.5rem;
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      font-family: 'Bebas Neue', cursive;
+      box-shadow: 0 0 20px var(--neon-yellow);
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .package-name {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.8rem;
+      color: var(--light);
+      letter-spacing: 2px;
+    }
+
+    .package-pricing {
+      text-align: right;
+    }
+
+    .package-price-old {
+      color: var(--gray);
+      text-decoration: line-through;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .package-price-new {
+      color: var(--neon-yellow);
+      font-size: 2.5rem;
+      font-weight: 900;
+      font-family: 'Bebas Neue', cursive;
+      text-shadow: 0 0 15px var(--neon-yellow);
+    }
+
+    .package-description {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .week-selection {
+      margin-top: 2rem;
+    }
+
+    .week-selection label {
+      display: block;
+      color: var(--neon-pink);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .week-checkboxes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .week-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(58, 134, 255, 0.05);
+      border: 1px solid var(--neon-blue);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .week-checkbox-wrapper:hover {
+      background: rgba(58, 134, 255, 0.1);
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 20px rgba(58, 134, 255, 0.3);
+    }
+
+    .week-checkbox-wrapper input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .week-checkbox-wrapper label {
+      margin: 0;
+      cursor: pointer;
+      color: var(--light);
+      font-weight: 600;
+    }
+
+    .btn-next-step {
+      width: 100%;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+      color: white;
+      border: 2px solid var(--neon-pink);
+      font-weight: 900;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Bebas Neue', cursive;
+      box-shadow: 0 10px 30px rgba(255, 0, 110, 0.4);
+    }
+
+    .btn-next-step:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px rgba(255, 0, 110, 0.7);
+    }
+
+    .btn-next-step:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .summary-box {
+      background: rgba(255, 0, 110, 0.05);
+      border: 2px solid var(--neon-pink);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-box h4 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.5rem;
+      color: var(--neon-pink);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 0, 110, 0.2);
+      color: var(--gray);
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--neon-yellow);
+      margin-top: 1rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--neon-pink);
+    }
+
+    .btn-whatsapp-final {
+      width: 100%;
+      padding: 1.8rem;
+      background: #25D366;
+      color: white;
+      border: none;
+      font-weight: 900;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Bebas Neue', cursive;
+      box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+
+    .btn-whatsapp-final:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 60px rgba(37, 211, 102, 0.8);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn {
+      width: 70px;
+      height: 70px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      box-shadow: 
+        0 6px 30px rgba(37, 211, 102, 0.6),
+        0 0 0 3px rgba(37, 211, 102, 0.3);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: whatsappPulse 2s infinite;
+    }
+
+    @keyframes whatsappPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+          0 6px 30px rgba(37, 211, 102, 0.6),
+          0 0 0 3px rgba(37, 211, 102, 0.3);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 
+          0 8px 40px rgba(37, 211, 102, 0.8),
+          0 0 0 6px rgba(37, 211, 102, 0.5);
+      }
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.2);
+      box-shadow: 
+        0 10px 50px rgba(37, 211, 102, 0.9),
+        0 0 0 6px rgba(37, 211, 102, 0.5);
+    }
+
+    .footer {
+      background: var(--dark-bg);
+      color: var(--gray);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-top: 2px solid var(--neon-pink);
+      box-shadow: 0 -10px 50px rgba(255, 0, 110, 0.2);
+    }
+
+    .footer p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .footer a {
+      color: var(--neon-pink);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer a:hover {
+      text-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 3.5rem;
+        letter-spacing: 4px;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-content {
+        width: 95%;
+      }
+
+      .package-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .package-pricing {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-wrapper">
+        <img src="https://cdn.abacus.ai/images/7b99c2e7-aba7-48de-b9f4-eb203fe13fcf.png" alt="Broadway Lab School" class="logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#investimento">Investimento</a></li>
+          <li><a href="https://wa.me/5511994828255?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Cursos%20de%20F%C3%A9rias%202026%20da%20Broadway%20Lab%20School." target="_blank">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>CURSOS DE FÉRIAS 2026</h1>
+      <p class="hero-subtitle">
+        Viva a magia da Broadway em Janeiro com canto, dança e interpretação
+      </p>
+      <a href="#cursos" class="hero-cta">Escolha seu curso</a>
+    </div>
+  </section>
+
+  <section class="section" id="cursos">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">CURSOS DE FÉRIAS</h2>
+        <p class="section-subtitle">
+          Programas especiais de 1 semana para adolescentes e adultos
+        </p>
+      </div>
+
+      <div class="intro-box">
+        <p>
+          Os Cursos de Férias da Broadway Lab School são programas especiais de curta duração pensados para <strong>adolescentes e adultos</strong> que desejam vivenciar uma imersão em teatro musical durante o mês de janeiro.
+        </p>
+        <p>
+          Cada curso tem duração de <strong>1 semana</strong> e o aluno pode optar por participar por semana avulsa ou mais de uma semana. A programação é criada para que cada semana tenha conteúdo próprio, permitindo que novos alunos entrem em qualquer módulo e que quem permanece por mais tempo evolua continuamente.
+        </p>
+        <p>
+          Ao final de cada semana, os alunos apresentam um <strong>pocket show</strong>, mostrando um pouco do que foi estudado nas aulas de canto, dança e interpretação.
+        </p>
+        <p>
+          <strong>Horários:</strong> 14h às 17h (Adolescentes) | 18h às 21h (Adultos)<br>
+          <em>Obs: Poderão ser formadas turmas mistas dependendo da idade dos inscritos.</em>
+        </p>
+      </div>
+
+      <div class="courses-grid">
+
+        <article class="course-card" data-course="heathers">
+          <div class="course-tag">12 a 16/01</div>
+          <figure class="course-image-wrapper">
+            <img src="https://cdn.abacus.ai/images/849d368a-f5bd-4c2b-a5ad-3ba3b2b37c38.png" alt="Heathers" class="course-image">
+            <div class="course-image-overlay"></div>
+            <figcaption class="course-image-caption">HEATHERS</figcaption>
+          </figure>
+
+          <div class="course-content">
+            <h3 class="course-title">HEATHERS – O MUSICAL</h3>
+            <p class="course-short">
+              Uma imersão em performance, canto e interpretação com a estética ácida e colorida de Heathers.
+            </p>
+
+            <ul class="course-meta">
+              <li><i class="fa-solid fa-calendar"></i> 12 a 16 de Janeiro</li>
+              <li><i class="fa-solid fa-clock"></i> 14h-17h (Adolescentes) | 18h-21h (Adultos)</li>
+              <li><i class="fa-solid fa-music"></i> Pocket Show no final da semana</li>
+            </ul>
+
+            <div class="course-extra">
+              <div class="course-extra-inner">
+                <h4>Sobre a obra</h4>
+                <p>
+                  Inspirado no cult clássico, trabalhamos temas como amizade, identidade e pertencimento de forma responsável, sempre mediado pela equipe pedagógica, com foco na construção de personagem e consciência de cena.
+                </p>
+
+                <h4>O que vamos trabalhar</h4>
+                <ul>
+                  <li>Construção de personagem com foco em arco dramático</li>
+                  <li>Interpretação de texto com subtexto e intenção</li>
+                  <li>Números musicais coreografados em grupo</li>
+                  <li>Disciplina de ensaio e profissionalismo em cena</li>
+                  <li>Técnica vocal aplicada ao teatro musical</li>
+                  <li>Expressão corporal e presença cênica</li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn-toggle-extra" type="button">
+              <i class="fa-solid fa-chevron-down"></i>
+              Ver mais detalhes
+            </button>
+
+            <div class="course-footer">
+              <button class="btn-primary open-checkout" data-course="Heathers (12 a 16/01)">
+                GARANTIR MINHA VAGA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card" data-course="teen-beach">
+          <div class="course-tag">19 a 23/01</div>
+          <figure class="course-image-wrapper">
+            <img src="https://cdn.abacus.ai/images/64c2f1fa-f8be-44c8-ad26-56ca5cfdbe4f.png" alt="Teen Beach" class="course-image">
+            <div class="course-image-overlay"></div>
+            <figcaption class="course-image-caption">TEEN BEACH MOVIE</figcaption>
+          </figure>
+
+          <div class="course-content">
+            <h3 class="course-title">TEEN BEACH MOVIE</h3>
+            <p class="course-short">
+              Um curso leve, colorido e divertido, inspirado em Teen Beach Movie, perfeito para iniciantes.
+            </p>
+
+            <ul class="course-meta">
+              <li><i class="fa-solid fa-calendar"></i> 19 a 23 de Janeiro</li>
+              <li><i class="fa-solid fa-clock"></i> 14h-17h (Adolescentes) | 18h-21h (Adultos)</li>
+              <li><i class="fa-solid fa-music"></i> Pocket Show no final da semana</li>
+            </ul>
+
+            <div class="course-extra">
+              <div class="course-extra-inner">
+                <h4>Sobre a obra</h4>
+                <p>
+                  Com músicas animadas e coreografias cativantes, usamos o universo de Teen Beach para trabalhar ritmo, expressão corporal, musicalidade e trabalho em grupo, sempre com um ambiente seguro e acolhedor.
+                </p>
+
+                <h4>O que vamos trabalhar</h4>
+                <ul>
+                  <li>Confiança em cena para quem está começando</li>
+                  <li>Coreografias em grupo, coordenação e memória corporal</li>
+                  <li>Interpretação leve, com foco em alegria e amizade</li>
+                  <li>Experiência de "show final" para a família</li>
+                  <li>Musicalidade e ritmo aplicados à dança</li>
+                  <li>Trabalho em equipe e espírito colaborativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn-toggle-extra" type="button">
+              <i class="fa-solid fa-chevron-down"></i>
+              Ver mais detalhes
+            </button>
+
+            <div class="course-footer">
+              <button class="btn-primary open-checkout" data-course="Teen Beach Movie (19 a 23/01)">
+                GARANTIR MINHA VAGA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card" data-course="wicked">
+          <div class="course-tag">26 a 30/01</div>
+          <figure class="course-image-wrapper">
+            <img src="https://cdn.abacus.ai/images/2ff96771-5b36-4101-b856-4bf5bb67cfd1.png" alt="Wicked" class="course-image">
+            <div class="course-image-overlay"></div>
+            <figcaption class="course-image-caption">WICKED</figcaption>
+          </figure>
+
+          <div class="course-content">
+            <h3 class="course-title">WICKED – O MUSICAL</h3>
+            <p class="course-short">
+              Um mergulho em um dos maiores fenômenos da Broadway, trabalhando potência vocal e interpretação dramática.
+            </p>
+
+            <ul class="course-meta">
+              <li><i class="fa-solid fa-calendar"></i> 26 a 30 de Janeiro</li>
+              <li><i class="fa-solid fa-clock"></i> 14h-17h (Adolescentes) | 18h-21h (Adultos)</li>
+              <li><i class="fa-solid fa-music"></i> Pocket Show no final da semana</li>
+            </ul>
+
+            <div class="course-extra">
+              <div class="course-extra-inner">
+                <h4>Sobre a obra</h4>
+                <p>
+                  Wicked é um prato cheio para quem quer se desafiar em canto e interpretação. Trabalhamos grandes números, cenas icônicas e o subtexto das relações entre as personagens, explorando a complexidade emocional da obra.
+                </p>
+
+                <h4>O que vamos trabalhar</h4>
+                <ul>
+                  <li>Técnica vocal para grandes números musicais</li>
+                  <li>Interpretação dramática com profundidade emocional</li>
+                  <li>Presença cênica e comando de palco</li>
+                  <li>Trabalho de ensemble e harmonia vocal</li>
+                  <li>Análise de personagem e subtexto</li>
+                  <li>Performance de alto nível técnico e artístico</li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn-toggle-extra" type="button">
+              <i class="fa-solid fa-chevron-down"></i>
+              Ver mais detalhes
+            </button>
+
+            <div class="course-footer">
+              <button class="btn-primary open-checkout" data-course="Wicked (26 a 30/01)">
+                GARANTIR MINHA VAGA
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="investimento">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">INVESTIMENTO</h2>
+        <p class="section-subtitle">
+          Escolha o pacote ideal para você
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Uma Semana</h3>
+          <span class="price-old">R$ 570,00</span>
+          <span class="price-new">R$ 470,00</span>
+          <p>Escolha uma das três semanas disponíveis</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Duas Semanas</h3>
+          <span class="price-old">R$ 690,00</span>
+          <span class="price-new">R$ 590,00</span>
+          <p>Combine duas semanas e economize</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Pacote Completo</h3>
+          <span class="price-old">R$ 810,00</span>
+          <span class="price-new">R$ 710,00</span>
+          <p>Três semanas de imersão total</p>
+        </div>
+      </div>
+
+      <div class="payment-info">
+        <h4>Formas de Pagamento</h4>
+        <ul>
+          <li>PIX ou cartão de débito à vista</li>
+          <li>Cartão de crédito (em até 3x)</li>
+          <li>Boleto (em até 3x, sem juros):
+            <ul style="margin-top: 1rem; padding-left: 2rem;">
+              <li>1º Pagamento até 05/12/2025</li>
+              <li>2º Pagamento até 30/12/2025</li>
+              <li>3º Pagamento até 12/01/2026</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="discount-note">
+          🎭 Irmãos têm 10% de desconto a partir do segundo matriculado!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DE CHECKOUT -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-close" id="closeModal">×</button>
+        <h2>GARANTIR MINHA VAGA</h2>
+        <p id="selectedCourseDisplay">Curso selecionado</p>
+      </div>
+
+      <div class="modal-body">
+        <!-- STEP 1: Escolher Pacote -->
+        <div class="checkout-step active" id="step1">
+          <h3 class="step-title">Escolha seu pacote</h3>
+
+          <div class="package-options">
+            <div class="package-option" data-package="1" data-price="470">
+              <div class="package-header">
+                <div class="package-name">1 Semana</div>
+                <div class="package-pricing">
+                  <span class="package-price-old">R$ 570</span>
+                  <span class="package-price-new">R$ 470</span>
+                </div>
+              </div>
+              <p class="package-description">
+                Escolha uma semana para vivenciar o teatro musical
+              </p>
+            </div>
+
+            <div class="package-option" data-package="2" data-price="590">
+              <div class="package-header">
+                <div class="package-name">2 Semanas</div>
+                <div class="package-pricing">
+                  <span class="package-price-old">R$ 690</span>
+                  <span class="package-price-new">R$ 590</span>
+                </div>
+              </div>
+              <p class="package-description">
+                Combine duas semanas e evolua ainda mais
+              </p>
+            </div>
+
+            <div class="package-option best-deal" data-package="3" data-price="710">
+              <div class="package-header">
+                <div class="package-name">3 Semanas</div>
+                <div class="package-pricing">
+                  <span class="package-price-old">R$ 810</span>
+                  <span class="package-price-new">R$ 710</span>
+                </div>
+              </div>
+              <p class="package-description">
+                Imersão completa em todos os três musicais
+              </p>
+            </div>
+          </div>
+
+          <button class="btn-next-step" id="goToStep2" disabled>
+            Continuar
+          </button>
+        </div>
+
+        <!-- STEP 2: Escolher Semanas -->
+        <div class="checkout-step" id="step2">
+          <h3 class="step-title">Escolha as semanas</h3>
+
+          <div class="week-selection">
+            <label>Selecione <span id="weeksToSelect">1</span> semana(s):</label>
+            <div class="week-checkboxes">
+              <div class="week-checkbox-wrapper">
+                <input type="checkbox" id="week1" value="Heathers (12 a 16/01)">
+                <label for="week1">Heathers (12 a 16/01)</label>
+              </div>
+              <div class="week-checkbox-wrapper">
+                <input type="checkbox" id="week2" value="Teen Beach Movie (19 a 23/01)">
+                <label for="week2">Teen Beach Movie (19 a 23/01)</label>
+              </div>
+              <div class="week-checkbox-wrapper">
+                <input type="checkbox" id="week3" value="Wicked (26 a 30/01)">
+                <label for="week3">Wicked (26 a 30/01)</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-next-step" id="goToStep3" disabled>
+            Continuar
+          </button>
+        </div>
+
+        <!-- STEP 3: Resumo e WhatsApp -->
+        <div class="checkout-step" id="step3">
+          <h3 class="step-title">Resumo do Pedido</h3>
+
+          <div class="summary-box">
+            <h4>Seu Pedido</h4>
+            <div class="summary-item">
+              <span>Pacote:</span>
+              <span id="summaryPackage">-</span>
+            </div>
+            <div class="summary-item">
+              <span>Semanas:</span>
+              <span id="summaryWeeks">-</span>
+            </div>
+            <div class="summary-item">
+              <span>TOTAL:</span>
+              <span id="summaryTotal">R$ 0</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn-whatsapp-final" id="finalWhatsAppBtn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            FINALIZAR NO WHATSAPP
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Broadway Lab School. Todos os direitos reservados.</p>
+    <p>Desenvolvido com ❤️ para transformar vidas através do teatro musical</p>
+  </footer>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5511994828255?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Cursos%20de%20F%C3%A9rias%202026%20da%20Broadway%20Lab%20School." class="whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Toggle course details
+    document.querySelectorAll('.course-card').forEach(card => {
+      const toggleBtn = card.querySelector('.btn-toggle-extra');
+      const extraBlock = card.querySelector('.course-extra');
+
+      if (!toggleBtn || !extraBlock) return;
+
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = card.classList.contains('expanded');
+
+        document.querySelectorAll('.course-card.expanded').forEach(c => {
+          if (c !== card) {
+            c.classList.remove('expanded');
+            const otherBtn = c.querySelector('.btn-toggle-extra');
+            if (otherBtn) {
+              otherBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Ver mais detalhes';
+            }
+          }
+        });
+
+        card.classList.toggle('expanded');
+
+        if (!isExpanded) {
+          toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Esconder detalhes';
+        } else {
+          toggleBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Ver mais detalhes';
+        }
+      });
+    });
+
+    // CHECKOUT MODAL LOGIC
+    const modal = document.getElementById('checkoutModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const openCheckoutBtns = document.querySelectorAll('.open-checkout');
+    const selectedCourseDisplay = document.getElementById('selectedCourseDisplay');
+
+    let selectedCourse = '';
+    let selectedPackage = 0;
+    let selectedPrice = 0;
+    let selectedWeeks = [];
+
+    // Open modal
+    openCheckoutBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedCourse = btn.getAttribute('data-course');
+        selectedCourseDisplay.textContent = selectedCourse;
+        modal.classList.add('active');
+        resetCheckout();
+      });
+    });
+
+    // Close modal
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    // Reset checkout
+    function resetCheckout() {
+      selectedPackage = 0;
+      selectedPrice = 0;
+      selectedWeeks = [];
+
+      document.querySelectorAll('.package-option').forEach(opt => opt.classList.remove('selected'));
+      document.querySelectorAll('.week-checkbox-wrapper input').forEach(cb => cb.checked = false);
+      document.getElementById('goToStep2').disabled = true;
+      document.getElementById('goToStep3').disabled = true;
+
+      showStep(1);
+    }
+
+    // Show step
+    function showStep(stepNumber) {
+      document.querySelectorAll('.checkout-step').forEach(step => step.classList.remove('active'));
+      document.getElementById(`step${stepNumber}`).classList.add('active');
+    }
+
+    // Step 1: Select package
+    document.querySelectorAll('.package-option').forEach(option => {
+      option.addEventListener('click', () => {
+        document.querySelectorAll('.package-option').forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+
+        selectedPackage = parseInt(option.getAttribute('data-package'));
+        selectedPrice = parseInt(option.getAttribute('data-price'));
+
+        document.getElementById('goToStep2').disabled = false;
+      });
+    });
+
+    // Go to step 2
+    document.getElementById('goToStep2').addEventListener('click', () => {
+      document.getElementById('weeksToSelect').textContent = selectedPackage;
+      showStep(2);
+
+      // Pre-select if coming from a specific course
+      if (selectedPackage === 1) {
+        const courseMap = {
+          'Heathers (12 a 16/01)': 'week1',
+          'Teen Beach Movie (19 a 23/01)': 'week2',
+          'Wicked (26 a 30/01)': 'week3'
+        };
+
+        const weekId = courseMap[selectedCourse];
+        if (weekId) {
+          document.getElementById(weekId).checked = true;
+          validateWeekSelection();
+        }
+      }
+    });
+
+    // Week selection validation
+    const weekCheckboxes = document.querySelectorAll('.week-checkbox-wrapper input[type="checkbox"]');
+    weekCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', validateWeekSelection);
+    });
+
+    function validateWeekSelection() {
+      const checkedBoxes = document.querySelectorAll('.week-checkbox-wrapper input[type="checkbox"]:checked');
+      const goToStep3Btn = document.getElementById('goToStep3');
+
+      if (checkedBoxes.length === selectedPackage) {
+        goToStep3Btn.disabled = false;
+        selectedWeeks = Array.from(checkedBoxes).map(cb => cb.value);
+      } else {
+        goToStep3Btn.disabled = true;
+      }
+
+      // Disable other checkboxes if limit reached
+      if (checkedBoxes.length >= selectedPackage) {
+        weekCheckboxes.forEach(cb => {
+          if (!cb.checked) {
+            cb.disabled = true;
+            cb.parentElement.style.opacity = '0.5';
+          }
+        });
+      } else {
+        weekCheckboxes.forEach(cb => {
+          cb.disabled = false;
+          cb.parentElement.style.opacity = '1';
+        });
+      }
+    }
+
+    // Go to step 3
+    document.getElementById('goToStep3').addEventListener('click', () => {
+      showStep(3);
+      updateSummary();
+    });
+
+    // Update summary
+    function updateSummary() {
+      const packageNames = {
+        1: '1 Semana',
+        2: '2 Semanas',
+        3: '3 Semanas (Pacote Completo)'
+      };
+
+      document.getElementById('summaryPackage').textContent = packageNames[selectedPackage];
+      document.getElementById('summaryWeeks').innerHTML = selectedWeeks.join('<br>');
+      document.getElementById('summaryTotal').textContent = `R$ ${selectedPrice}`;
+
+      // Generate WhatsApp message
+      const message = `Olá! Gostaria de garantir minha vaga nos Cursos de Férias 2026 da Broadway Lab School.
+
+📦 *Pacote:* ${packageNames[selectedPackage]}
+📅 *Semanas escolhidas:*
+${selectedWeeks.map(w => `• ${w}`).join('\n')}
+
+💰 *Valor Total:* R$ ${selectedPrice}
+
+Aguardo retorno para finalizar a matrícula!`;
+
+      const whatsappUrl = `https://wa.me/5511994828255?text=${encodeURIComponent(message)}`;
+      document.getElementById('finalWhatsAppBtn').href = whatsappUrl;
+    }
+  </script>
+
+</body>
+</html>
